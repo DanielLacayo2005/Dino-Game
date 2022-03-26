@@ -1,0 +1,156 @@
+body{
+    height: 100vh;
+    background: #162c26;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor { 
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    
+    position: relative;
+
+    background: url(noche.png);
+    transition: background-color 1s linear;
+    overflow: hidden;
+}
+
+.creatividad{
+    position: absolute;
+    margin-top: 550px;
+    margin-left: 34%;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 20px;
+}
+
+.mediodia {
+    background-color: #ffdcf3;
+}
+
+.tarde {
+    background-color: #ffadad;
+}
+
+.noche {
+    background-color: #aca8c7;
+}
+
+.dino {
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+
+    background: url(pica.png) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x: 5px;
+
+}
+
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite;
+}
+.dino-estrellado {
+    background-position-x: -252px;
+}
+
+.suelo {
+    width: 200%;
+    height: 42px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url(suelo90.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+
+}
+
+.cactus{
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 12px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(arbol.png) no-repeat;
+}
+.cactus2{
+    width: 98px;
+    height: 66px;
+
+    background: url(gris.png) no-repeat;
+}
+
+.nube{
+    width: 92px;
+    height: 26px;
+
+    position: absolute;
+    z-index: 0;
+
+    background: url(nubeintento.png) no-repeat;
+    background-size: 92px 26px;
+}
+
+.score{
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+
+    color: #ffffff;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.game-over{
+    display: none;
+    margin-top: 110px;
+
+    position: absolute;
+    width: 100%;
+
+
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+}
+
+@keyframes animarDino{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px;
+    }
+}
+
+.reinicio{
+    position: absolute;
+    margin-top: 650px;
+    margin-left: 34%;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 40px;
+    box-shadow: 9px;
+    border-style: hidden;
+}
